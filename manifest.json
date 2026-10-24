@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "BCReg Row Actions",
+  "version": "0.3",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bcreg-row-actions@mruff-aeq.github.io",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "menus"
+  ],
+  "host_permissions": [
+    "https://*.bcregistry.gov.bc.ca/*"
+  ],
+  "background": {
+    "scripts": [
+      "bg.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.business-registry-dashboard.bcregistry.gov.bc.ca/*"
+      ],
+      "js": [
+        "page.js"
+      ],
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://*.business-registry-dashboard.bcregistry.gov.bc.ca/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "description": "Right-click a row in the BC Registries staff dashboard to open the business, draft, name request and more in a new tab."
+}
