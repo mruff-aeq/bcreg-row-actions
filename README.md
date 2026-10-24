@@ -2,6 +2,8 @@
 
 A small LibreWolf / Firefox add-on for the BC Registries staff dashboard (My Business Registry). Right click any row in the table and you get a few extra options in the menu, each one opens in a new tab so you don't lose your place in the list.
 
+![right click menu on a dashboard row](demo.png)
+
 What shows up depends on the row:
 
 - a business: open its dashboard, open View Access
